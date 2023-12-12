@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Home | EMPREMRED S.A.S</title>
+    <title>EMPREMRED S.A.S</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -50,8 +50,7 @@
                     <li><a href="{{route('services')}}">Servicios</a></li>
                     <li><a href="{{route('contact')}}">Contactos</a></li>
                     <li><a href="{{route('form')}}">Cuentanos</a></li>
-
-                    {{-- <li><a href="{{route('login')}}">Login</a></li> --}}
+                    <li><a href="{{route('login')}}">Login</a></li>
 
                 </ul>
             </nav><!-- .navbar -->
