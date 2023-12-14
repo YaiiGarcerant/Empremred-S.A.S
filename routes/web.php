@@ -20,7 +20,18 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/services', [App\Http\Controllers\PagesController::class, 'services'])->name('services');
-Route::get('/contact', [App\Http\Controllers\PagesController::class, 'contact'])->name('contact');
-Route::get('/formContacto', [App\Http\Controllers\PagesController::class, 'form'])->name('form');
+Route::get('/home',
+    [App\Http\Controllers\HomeController::class, 'index']
+)->name('home');
+
+Route::get('/services', function () {
+    return view('component.service');
+})->name('services');
+
+Route::get('/contact', function () {
+    return view('component.contact');
+})->name('contact');
+
+Route::get('/formContacto', function () {
+    return view('component.form');
+})->name('form');

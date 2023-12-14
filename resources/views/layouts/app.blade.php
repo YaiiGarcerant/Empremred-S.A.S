@@ -47,11 +47,27 @@
             <nav id="navbar" class="navbar">
                 <ul>
                     <li><a href="{{route('welcome')}}" class="active">Home</a></li>
+                    @guest
                     <li><a href="{{route('services')}}">Servicios</a></li>
                     <li><a href="{{route('contact')}}">Contactos</a></li>
-                    <li><a href="{{route('form')}}">Cuentanos</a></li>
                     <li><a href="{{route('login')}}">Login</a></li>
+                    @else
+                    <li><a href="{{route('form')}}">Llegamos a ti</a></li>
 
+                    <li class="dropdown" style="text-align: start"><a
+                        href="#"><span>{{ Auth::user()->name }}</span> <i
+                            class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a
+                                href="{{ route('logout') }}"onclick="event.preventDefault();  document.getElementById('logout-form').submit();">Cerrar
+                                Sesion</a></li>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </ul>
+                </li>
+                    @endguest
+                   
                 </ul>
             </nav><!-- .navbar -->
 

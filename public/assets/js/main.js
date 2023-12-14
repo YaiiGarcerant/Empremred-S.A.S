@@ -8,6 +8,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   "use strict";
 
+
   /**
    * Preloader
    */
@@ -150,3 +151,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+
+const update = ()=>{
+  setTimeout(() => {
+    location.reload();
+}, 1500);
+}
